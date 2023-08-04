@@ -9,4 +9,4 @@ def get_data(*args, **kwargs):
 
 dataset = {"00000":[0,1,2,3,2,1,0], "00001":[5,4,3,2,1,0]}
 #greetings('John Doe')
-get_data
+#get_data

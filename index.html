@@ -26,12 +26,12 @@
       <button py-click="get_data()" id="get_data_button" >Submit</button>
    
     <br>
-    <p id="result"></p>
+    <div id="result"></div>
     <py-script>
       def get_data():
         data_input = Element("unique_identifyer").value
         field = Element("result")
-        result.write(data_input)
+        result.element.innerText = data_input
 
 
 

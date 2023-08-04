@@ -8,13 +8,13 @@
 
     <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <py-env>
-        - paths:
-          - ./testpython1.py
-      </py-env>
+
   </head>
   <body>
-
+    <py-config>
+      [[fetch]]
+        files = ["testpython1.py"]
+    </py-config>
     <h1 class="title">Atopic Dermatitis Platform</h1>
     <p>Welcome to the AD platform! Please login bellow using your Unique
       Identifyer (UnId) that you created when you first stated filling out

@@ -51,6 +51,12 @@
           df = pd.DataFrame(data)
           fig, ax = plt.subplots()
           plt.bar(df.index, df[0])
+          # Naming the x-label
+          plt.xlabel('Visit')
+          # Naming the y-label
+          plt.ylabel('Poem Score')
+          # Naming the title of the plot
+          plt.title('Patient Data - POEM score vs. Visit')
           display(fig, target = "plot")
     </py-script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

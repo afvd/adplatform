@@ -8,4 +8,6 @@ def greetings(name):
 def get_data(*args, **kwargs):
     result_place = Element('result')
     data_key = Element("unique_identifyer").value
-    result_place.element.innerText = data_key
+
+    data = dataset[data_key]
+    result_place.element.innerText = data

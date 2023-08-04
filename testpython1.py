@@ -1,7 +1,6 @@
 
 import pyscript
 from pyscript import Element
-from pyscript import Display
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -17,9 +16,10 @@ def get_data(*args, **kwargs):
 
     data = dataset[data_key]
     result_place.element.innerText = data
-    make_table(data)
+    return make_table(data)
 
 def make_table(data):
     df = pd.DataFrame(data)
     plt.hist(df[0])
-    display(plt, target = "result", append = false)
+    
+    return plt

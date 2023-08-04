@@ -21,4 +21,4 @@ def get_data(*args, **kwargs):
 def make_table(data):
     df = pd.DataFrame(data)
     plt.hist(df[0])
-    plt.show()
+    display(plt)

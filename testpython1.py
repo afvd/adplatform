@@ -1,7 +1,7 @@
 
 import pyscript
 from pyscript import Element
-await micropip.install("pandas")
+from pyscript import Display
 import pandas as pd
 import matplotlib.pyplot as plt
 

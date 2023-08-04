@@ -31,11 +31,29 @@
     <br>
     <div id="result"></div>
     <py-script>
-      from testpython1 import get_data
+      import pandas as pd
+      import matplotlib.pyplot as plt
 
-      def get_data1(*args, **kwargs):
-          plt = get_data(*args, **kwargs)
+
+      dataset = {'0':[0,1,2,3,2,1,0], '1':[5,4,3,2,1,0]}
+
+      def greetings(name):
+          print(f'Hi, {name}')
+
+      def get_data(*args, **kwargs):
+          result_place = Element('result')
+          data_key = Element("unique_identifyer").value
+
+          data = dataset[data_key]
+          result_place.element.innerText = data
+          make_table(data)
+
+      def make_table(data):
+          df = pd.DataFrame(data)
+          plt.hist(df[0])
           display(plt, target = "result", append = false)
+
+
 
     </py-script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

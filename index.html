@@ -26,7 +26,10 @@
     <br>
     <p id="result"></p>
     <py-script>
-      from testpython1 import get_data
+      def get_data():
+        data_input = Element("unique_identifyer").value
+        field = Element("result")
+        result.write(data_input)
 
 
 

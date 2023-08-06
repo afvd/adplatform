@@ -63,13 +63,14 @@
     </py-script>
     <py-script>
       import testpython1 as tp
+      from pyscript import Element
       def get_data(*args, **kwargs):
           result_place = Element('result')
           data_key = Element("unique_identifyer").value
           message, data = tp.get_data(data_key)
           result_place.element.innerText = message
           if data.empty:
-              Element("plot").clear
+              Element("plot").clear()
           else:
               fig = tp.get_data_plot(data)
               display(fig, target = "plot", append = False)

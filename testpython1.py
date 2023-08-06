@@ -16,7 +16,7 @@ def get_data(data_key):
         message = "loading Data for entered Unique Identifyer"
     else:
         message = "Invalid Unique Identifyer"
-    return message, Data_frame
+    return message, data_frame
 
 def get_data_df(data):
     df = pd.DataFrame(data)

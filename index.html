@@ -18,7 +18,7 @@
         files = ["testpython1.py"]
     </py-config>
     <h1 class="title">Atopic Dermatitis Platform</h1>
-    <p>Welcome to the AD platform! Please login bellow using your Unique
+    <p>Welcome to the AD platform! Please login below using your Unique
       Identifyer (UnId) that you created when you first stated filling out
       the surveys</p>
 
@@ -33,34 +33,7 @@
     <br>
     <div id="plot">
     </div>
-    <py-script>
-      """
-      import pandas as pd
-      import matplotlib.pyplot as plt
-      dataset = {'0':[0,1,2,3,2,1,0], '1':[5,4,3,2,1,0]}
-
-      def greetings(name):
-          print(f'Hi, {name}')
-
-      def get_data(*args, **kwargs):
-          result_place = Element('result')
-          data_key = Element("unique_identifyer").value
-
-          data = dataset[data_key]
-          result_place.element.innerText = data
-
-          df = pd.DataFrame(data)
-          fig, ax = plt.subplots()
-          plt.bar(df.index, df[0])
-          # Naming the x-label
-          plt.xlabel('Visit')
-          # Naming the y-label
-          plt.ylabel('Poem Score')
-          # Naming the title of the plot
-          plt.title('Patient Data - POEM score vs. Visit')
-          display(fig, target = "plot", append = False)
-      """
-    </py-script>
+    
     <py-script>
       import testpython1 as tp
       from pyscript import Element

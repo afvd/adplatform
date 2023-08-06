@@ -34,6 +34,7 @@
     <div id="plot">
     </div>
     <py-script>
+      """
       import pandas as pd
       import matplotlib.pyplot as plt
       dataset = {'0':[0,1,2,3,2,1,0], '1':[5,4,3,2,1,0]}
@@ -58,6 +59,16 @@
           # Naming the title of the plot
           plt.title('Patient Data - POEM score vs. Visit')
           display(fig, target = "plot", append = False)
+      """
+    </py-script>
+    <py-script>
+      import testpython1 as tp
+      result_place = Element('result')
+      data_key = Element("unique_identifyer").value
+      message, data = tp.get_data(data_key)
+      result_place.element.innerText = message
+      fig = tp.get_data_plot(data)
+      display(fig, target = "plot", append = False)
     </py-script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

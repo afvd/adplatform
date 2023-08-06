@@ -1,6 +1,6 @@
 
-import pyscript
-from pyscript import Element
+#import pyscript
+#from pyscript import Element
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -20,7 +20,7 @@ def get_data(data_key):
 
 def get_data_df(data):
     df = pd.DataFrame(data)
-    return def
+    return df
 
     #takes in a pandas dataframe "data" and a plot type
 def get_data_plot(data):

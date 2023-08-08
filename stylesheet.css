@@ -2,9 +2,11 @@
   color: #02ccba;
   text-align: center;
   background-color: #F1F1F1;
+  border-width: 2px;
 }
 .maindiv {
   margin: auto;
   width: 50%;
   background-color: #F1F1F1;
+  border-width: 2px;
 }

@@ -1,3 +1,8 @@
 .title {
   color: #02ccba;
+  text-align: center;
+}
+.maindiv {
+  margin: auto;
+  width: 50%;
 }
